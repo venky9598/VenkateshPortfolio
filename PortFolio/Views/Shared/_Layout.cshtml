@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - PortFolio</title>
+    <link rel="stylesheet" href="~/tailwindcss/base.min.css">
+    <link rel="stylesheet" href="~/tailwindcss/components.min.css">
+    <link rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
+    <link rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
+    <link rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
+    <link rel="stylesheet" href="~/tailwindcss/utilities.min.css">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <header class="text-gray-600 dark:text-gray-400 dark:bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center dark:text-gray-300 text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">Devanshu Agarwal</span>
+            </a>
+            <nav class="my-nav md:ml-auto flex  flex-wrap items-center text-base justify-center">
+                <a href="#section1" class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">About</a>
+                <a href="#section2" class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Experience</a>
+                <a href="#section3" class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Projects</a>
+                <a href="#section4" class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Skills</a>
+                <a href="#section5" class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Achievements</a>
+                <a class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Education</a>
+                <a class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Contact</a>
+                <a class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Blog</a>
+                <a class="mr-5 hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-400">Resume</a>
+                <button class="mode"></button>
+            </nav>
+        </div>
+    </header>
+    <div class="frame-root">
+        <div class="frame-content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://tailblocks.cc/static/js/main.d253fc29.chunk.js"></script>
+    <script src="https://tailblocks.cc/static/js/2.34fbc5a9.chunk.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

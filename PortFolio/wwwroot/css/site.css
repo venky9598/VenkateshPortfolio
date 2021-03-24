@@ -1,0 +1,137 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.section-heading {
+    font-size: 3rem !important;
+}
+
+ul {
+    list-style: initial !important;
+    padding: inherit !important;
+    margin: inherit !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mode {
+    background-color: blueviolet;
+    border-radius: 30px;
+    width: 58px;
+    position: relative;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.mode::before {
+    width: 32px;
+    height: 100%;
+    content: "";
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='white' stroke-width='2.4' fill='white' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Cpath d='M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42'/%3E%3C/svg%3E");
+    background-size: cover;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    transition: .3s;
+    background-position: center;
+}
+
+.mode::after {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    background-color: white;
+    content: "";
+    border-radius: 50%;
+    transition: transform .3s;
+}
+
+.app.dark-mode .mode {
+    background-color: darkgray;
+}
+
+.app.dark-mode .mode::after {
+    transform: translateX(-24px);
+}
+
+.app.dark-mode .mode::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' stroke='white' stroke-width='2' fill='white' stroke-linecap='round' stroke-linejoin='round' class='css-i6dzq1' viewBox='0 0 24 24'%3E%3Cpath d='M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z'/%3E%3C/svg%3E");
+    transform: translateX(26px);
+}
+
+.mode {
+    margin-left: auto;
+}
