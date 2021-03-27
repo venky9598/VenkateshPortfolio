@@ -36,7 +36,7 @@ namespace PortFolio
             services.AddResponseCompression(opt =>
             {
                 opt.Providers.Add<GzipCompressionProvider>();
-                opt.EnableForHttps = true;
+                opt.EnableForHttps = false;
             });
             services.Configure<GzipCompressionProviderOptions>(options => options.Level =
             CompressionLevel.Fastest);
