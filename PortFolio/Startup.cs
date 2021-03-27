@@ -25,6 +25,8 @@ namespace PortFolio
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc(x => x.EnableEndpointRouting = false);
+
             services.AddControllersWithViews();
             services.AddWebOptimizer(pipeline =>
             {
@@ -57,11 +59,12 @@ namespace PortFolio
             app.UseWebOptimizer();
             app.UseStaticFiles();
 
-            app.UseResponseCompression();// (Configure Method)
+            
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseMvc();
+            app.UseResponseCompression();// (Configure Method)
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
