@@ -29,6 +29,7 @@ namespace PortFolio
                 pipeline.MinifyJsFiles("js/*.js", "/lib/jquery/dist/jquery.min.js");
                 pipeline.MinifyCssFiles("css/*.css", "tailwindcss/*.css");
             });
+            services.AddResponseCompression();// (ConfigureServices method)
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +49,7 @@ namespace PortFolio
             app.UseWebOptimizer();
             app.UseStaticFiles();
 
+            app.UseResponseCompression();// (Configure Method)
             app.UseRouting();
 
             app.UseAuthorization();
