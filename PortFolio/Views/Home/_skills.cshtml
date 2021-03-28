@@ -1,0 +1,36 @@
+﻿@{
+
+    var skills = new List<string>(){
+        "HTML", "CSS", "Bootstrap", "LESS", "Javascript",
+         "jQuery", "MVC", "C#", ".NET", "ASP.NET Core", "Data Structures",
+        "Algorithms", "SQL Server" ,"EF Core", "JQuery",
+        "JSON", "XML", "SOLID" ,"TDD" ,"WebAPI", "XUnit",
+        "NUnit", "Unit of Work", "Java(Basic)",
+        "MVC Architecture", "Alexa Development", "SignalR"
+    };
+
+}
+
+<section class="text-gray-600 body-font bg-white dark:text-gray-400 dark:bg-gray-900" id="section4">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+        <div class="text-left lg:w-3/3 w-full">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 dark:text-gray-100 font-medium text-gray-900 section-heading">Skills</h1>
+            <p class="mb-8 leading-relaxed dark:text-gray-300">
+            </p>
+        </div>
+    </div>
+</section>
+<section class="text-gray-600 px-10 body-font bg-white dark:text-gray-400 dark:bg-gray-900">
+    <div class="container lg:w-100 lg:px-48 pb-24 mx-auto">
+
+        @foreach (var skill in skills)
+        {
+            <span class="relative inline-flex rounded-md shadow-sm">
+                <span class="inline-flex items-center px-2 py-1 mt-1 text-base leading-6
+                        font-medium rounded-md text-white bg-gray-500 transition ease-in-out duration-150">
+                    @skill
+                </span>
+            </span>
+        }
+    </div>
+</section>
