@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -17,14 +19,14 @@
     <meta name="author" content="Devanshu Agarwal">
     <link rel="da icon" href="/lib/images/da-icon.png" type="image/x-icon" />
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/tailwindcss/base.min.css">
-    <link rel="stylesheet" href="~/tailwindcss/components.min.css">
-    <link rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
-    <link rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
-    <link rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
-    <link rel="stylesheet" href="~/tailwindcss/utilities.min.css">
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link async rel="stylesheet" href="~/tailwindcss/base.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/components.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/utilities.min.css">
+    <link async rel="stylesheet" href="~/css/site.css" />
+    <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 <body>
     <header class="text-gray-600 dark:text-gray-400 dark:bg-gray-900 body-font">
@@ -52,10 +54,10 @@
         </div>
     </div>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="https://tailblocks.cc/static/js/main.d253fc29.chunk.js"></script>
-    <script src="https://tailblocks.cc/static/js/2.34fbc5a9.chunk.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script async src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script async src="https://tailblocks.cc/static/js/main.d253fc29.chunk.js"></script>
+    <script async src="https://tailblocks.cc/static/js/2.34fbc5a9.chunk.js"></script>
+    <script async src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
