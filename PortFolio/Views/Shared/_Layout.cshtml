@@ -17,11 +17,14 @@
     <meta name="author" content="Devanshu Agarwal">
     <meta property="og:image" content="/lib/images/da-icon.png" />
     <link rel="da icon" href="/lib/images/da-icon.png" type="image/x-icon" />
-    <link async defer rel="stylesheet" href="~/tailwindcss/base.min.css">
-    <link async defer rel="stylesheet" href="~/tailwindcss/components.min.css">
-    <link async defer rel="stylesheet" href="~/css/site.css" />
-    <link async defer rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
-    <link async defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link async rel="stylesheet" href="~/tailwindcss/base.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/components.min.css">
+    <link async rel="stylesheet" href="~/css/site.css" />
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
+    <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
+    <link async rel="stylesheet" href="~/tailwindcss/utilities.min.css">
     <title>@ViewData["Title"]</title>
 </head>
 <body>
@@ -58,6 +61,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-<link async defer rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
-<link async defer rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
-<link async defer rel="stylesheet" href="~/tailwindcss/utilities.min.css">
