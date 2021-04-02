@@ -20,11 +20,8 @@
     <link async defer rel="stylesheet" href="~/tailwindcss/base.min.css">
     <link async defer rel="stylesheet" href="~/tailwindcss/components.min.css">
     <link async defer rel="stylesheet" href="~/css/site.css" />
-    <link async defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link async defer rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
-    <link async defer rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
     <link async defer rel="stylesheet" href="~/tailwindcss/tailwind.min.css">
-    <link async defer rel="stylesheet" href="~/tailwindcss/utilities.min.css">
+    <link async defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>@ViewData["Title"]</title>
 </head>
 <body>
@@ -54,10 +51,13 @@
     </div>
 
 
-    
+
     <script async src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+<link async defer rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css">
+<link async defer rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css">
+<link async defer rel="stylesheet" href="~/tailwindcss/utilities.min.css">
