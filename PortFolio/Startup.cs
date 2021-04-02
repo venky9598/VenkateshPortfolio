@@ -26,17 +26,20 @@ namespace PortFolio
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(x => x.EnableEndpointRouting = false);
-
+            services.AddResponseCaching();
             services.AddControllersWithViews();
             services.AddWebOptimizer(pipeline =>
             {
                 pipeline.MinifyJsFiles("js/*.js", "/lib/jquery/dist/jquery.min.js");
                 pipeline.MinifyCssFiles("css/*.css", "tailwindcss/*.css");
             });
-            services.AddResponseCompression(opt =>
+            services.AddResponseCompression(options =>
             {
-                opt.Providers.Add<GzipCompressionProvider>();
-                opt.EnableForHttps = false;
+                options.Providers.Add<BrotliCompressionProvider>();
+                options.Providers.Add<GzipCompressionProvider>();
+                options.MimeTypes =
+                    ResponseCompressionDefaults.MimeTypes.Concat(
+                        new[] { "image/svg+xml" });
             });
             services.Configure<GzipCompressionProviderOptions>(options => options.Level =
             CompressionLevel.Fastest);
@@ -62,6 +65,7 @@ namespace PortFolio
             app.UseWebOptimizer();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseResponseCaching();
             app.UseAuthorization();
             app.UseMvc();
             
