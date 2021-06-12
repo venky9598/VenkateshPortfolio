@@ -28,6 +28,8 @@ namespace PortFolio
             services.AddMvc(x => x.EnableEndpointRouting = false);
             services.AddResponseCaching();
             services.AddControllersWithViews();
+            services.AddSignalR().AddAzureSignalR(x =>
+             x.ConnectionString = "Endpoint=https://fileprogress.service.signalr.net;AccessKey=Rox/iery4yyZ0MRpAx3JYTdnZhXsK26dC4IHZgioQ58=;Version=1.0;");
             services.AddWebOptimizer(pipeline =>
             {
                 pipeline.MinifyJsFiles("js/*.js", "/lib/jquery/dist/jquery.min.js");
@@ -74,6 +76,7 @@ namespace PortFolio
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapHub<TelegramBotHub>("/telegramBotHub");
             });
         }
     }
