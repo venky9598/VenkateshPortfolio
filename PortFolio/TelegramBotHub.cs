@@ -12,12 +12,11 @@ namespace PortFolio
     {
         bool isOnline = false;
 
-        ITelegramBotClient botClient;
+        ITelegramBotClient botClient = new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
             isOnline = false;
-            botClient = new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
             while (!isOnline)
             {
                 SendMessage(621742107);
