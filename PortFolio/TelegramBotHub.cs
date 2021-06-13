@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.SignalR;
 using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Text.RegularExpressions;
-using System.Threading;
 using System.Threading.Tasks;
 using Telegram.Bot;
 
@@ -10,30 +11,51 @@ namespace PortFolio
 {
     public class TelegramBotHub : Hub
     {
-        static bool isOnline = false;
+        ConcurrentDictionary<string, List<int>> concurrentDictionary =
+                    new ConcurrentDictionary<string, List<int>>();
 
-        static ITelegramBotClient botClient = new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
+        static ITelegramBotClient botClient = 
+                    new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
-            isOnline = false;
-            while (!isOnline)
+            List<int> values = new List<int>();
+
+            if (concurrentDictionary.ContainsKey(Context.ConnectionId))
             {
-                SendMessage(621742107);
-                SendMessage(805484468);
-                Thread.Sleep(1000 * 60 * 5);
+                var ids = concurrentDictionary[Context.ConnectionId];
+
+                foreach(var id in ids)
+                {
+                    SendMessage(id);
+                }
             }
+
+            concurrentDictionary.Remove(Context.ConnectionId, out values);
 
             await base.OnDisconnectedAsync(exception);
         }
 
         public override async Task OnConnectedAsync()
         {
-            isOnline = true;
-            SendMessageOnline(621742107);
-            SendMessageOnline(805484468);
-
             await base.OnConnectedAsync();
+        }
+
+        public async Task JoinUser(List<int> userIds)
+        {
+            if(!concurrentDictionary.ContainsKey(Context.ConnectionId))
+            {
+                concurrentDictionary.TryAdd(Context.ConnectionId, userIds);
+
+                var ids = concurrentDictionary[Context.ConnectionId];
+
+                foreach (var id in ids)
+                {
+                    SendMessageOnline(id);
+                }
+            }
+
+            await Task.CompletedTask;
         }
 
         public async void SendMessage(int id)
