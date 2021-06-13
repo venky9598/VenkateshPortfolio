@@ -29,9 +29,9 @@ namespace PortFolio
                 {
                     SendMessage(id);
                 }
-            }
 
-            concurrentDictionary.Remove(Context.ConnectionId, out values);
+                concurrentDictionary.TryRemove(Context.ConnectionId, out values);
+            }
 
             await base.OnDisconnectedAsync(exception);
         }
