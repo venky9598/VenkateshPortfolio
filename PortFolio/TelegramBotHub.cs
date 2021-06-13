@@ -11,7 +11,7 @@ namespace PortFolio
 {
     public class TelegramBotHub : Hub
     {
-        ConcurrentDictionary<string, List<int>> concurrentDictionary =
+        static ConcurrentDictionary<string, List<int>> concurrentDictionary =
                     new ConcurrentDictionary<string, List<int>>();
 
         static ITelegramBotClient botClient = 
@@ -41,7 +41,7 @@ namespace PortFolio
             await base.OnConnectedAsync();
         }
 
-        public async Task JoinUser(List<int> userIds)
+        public void JoinUser(List<int> userIds)
         {
             if(!concurrentDictionary.ContainsKey(Context.ConnectionId))
             {
@@ -54,8 +54,6 @@ namespace PortFolio
                     SendMessageOnline(id);
                 }
             }
-
-            await Task.CompletedTask;
         }
 
         public async void SendMessage(int id)
