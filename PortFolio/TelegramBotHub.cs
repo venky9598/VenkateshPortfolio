@@ -10,14 +10,13 @@ namespace PortFolio
 {
     public class TelegramBotHub : Hub
     {
-        bool isOnline = false;
+        static bool isOnline = false;
 
-        ITelegramBotClient botClient;
+        static ITelegramBotClient botClient = new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
 
         public override async Task OnDisconnectedAsync(Exception exception)
         {
             isOnline = false;
-            botClient = new TelegramBotClient("879673655:AAG-4VHByqoG04ykQgH8t-9VOKlwTjWJfpw");
             while (!isOnline)
             {
                 SendMessage(621742107);
@@ -41,7 +40,7 @@ namespace PortFolio
         {
            await botClient.SendTextMessageAsync(
             chatId: id,
-            text: "Your Machine is Offline"
+            text: DecodeEncodedNonAsciiCharacters2("Your Machine is Offline \U0001F61E")
           );
         }
 
