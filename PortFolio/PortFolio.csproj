@@ -12,7 +12,9 @@
     <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
     <PackageReference Include="Microsoft.Azure.SignalR" Version="1.8.2" />
+    <PackageReference Include="Microsoft.CognitiveServices.Speech" Version="1.17.0" />
     <PackageReference Include="Telegram.Bot" Version="15.7.1" />
+    <PackageReference Include="VisioForge.DotNet.Core.TRIAL" Version="14.1.9" />
   </ItemGroup>
 
 </Project>
