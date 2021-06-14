@@ -64,14 +64,12 @@ namespace PortFolio.Controllers
 
                 string currentDir = System.IO.Directory.GetCurrentDirectory() + @"\MyFile.wav";
 
-                int duration = GetWavFileDuration(currentDir);
-
                 using (var stream = System.IO.File.OpenRead(currentDir))
                 {
                     await botClient.SendAudioAsync(
                       chatId: e.Message.Chat,
                       audio: stream,
-                      duration: duration,
+                      duration: 10,
                       performer: "textttovoicebot",
                       title: Guid.NewGuid().ToString() + ".wav"
                     );
@@ -91,14 +89,6 @@ namespace PortFolio.Controllers
             var result = await synthesizer.SpeakTextAsync(message);
             using var stream = AudioDataStream.FromResult(result);
             await stream.SaveToWaveFileAsync(currentDir);
-        }
-
-        public static int GetWavFileDuration(string fileName)
-        {
-            WaveFileReader wf = new WaveFileReader(fileName);
-            int seconds = wf.TotalTime.Seconds;
-            wf.Close();
-            return seconds;
         }
     }
 }
