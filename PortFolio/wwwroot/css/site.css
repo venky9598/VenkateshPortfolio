@@ -138,3 +138,33 @@ html {
      outline: 0px dotted !important; 
      outline: 0px auto -webkit-focus-ring-color !important; 
 }
+
+#particles-js {
+    background-image: url((unknown));
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%;
+}
+
+.particles-js-canvas-el {
+    position: absolute;
+    height: 11% !important;
+}
+
+.devanshu-image {
+    z-index: 10;
+}
+
+.devanshu-description {
+    box-shadow: 0px 0px 37px 0px;
+    border-bottom-right-radius: 46px;
+    padding: 24px 30px 21px 79px;
+}
+
+@media only screen and (max-width: 768px) {
+    .devanshu-description {
+        padding: 24px 30px 21px 30px;
+        margin-top: 45px;
+    }
+}
