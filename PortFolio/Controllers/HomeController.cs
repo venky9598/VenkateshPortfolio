@@ -18,6 +18,7 @@ namespace PortFolio.Controllers
             _logger = logger;
         }
 
+        [ResponseCache(Duration = 100, Location = ResponseCacheLocation.Any)]
         public IActionResult Index()
         {
             return View();

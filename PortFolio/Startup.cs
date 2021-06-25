@@ -38,12 +38,18 @@ namespace PortFolio
             services.AddResponseCompression(options =>
             {
                 options.Providers.Add<BrotliCompressionProvider>();
+                
                 options.Providers.Add<GzipCompressionProvider>();
                 options.MimeTypes =
                     ResponseCompressionDefaults.MimeTypes.Concat(
                         new[] { "image/svg+xml" });
             });
-            services.Configure<GzipCompressionProviderOptions>(options => options.Level =
+            services.Configure<BrotliCompressionProviderOptions>(options =>
+            {
+                options.Level = CompressionLevel.Fastest;
+            });
+            services.Configure<GzipCompressionProviderOptions>(options =>
+            options.Level =
             CompressionLevel.Fastest);
         }
 
