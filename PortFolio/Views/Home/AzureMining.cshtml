@@ -1,0 +1,348 @@
+﻿@{
+    Layout = "_Layout2";
+}
+
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 dark:text-white">How to Turn Your Azure Free Credits into Real Money</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">The rate can fluctuate between 1:1 and 1:10, i.e. in the best case you'll get almost 1$ worth of cryptocurrency for every 1$ spent on azure (depending on the current exchange-rates). With an MSDN Enterprise subscription you can mine cryptocurrency worth up to 149$ every month! This is possible because the newly introduced Azure-batch-service is dirt cheap!</p>
+        </div>
+        <div class="flex flex-wrap">
+            <div class="xl:w-1/3 lg:w-1/1 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                <h2 class="text-lg sm:text-xl dark:text-white font-medium title-font mb-2">You'll need a azure-account with free-credit, e.g. from a MSDN-subscription</h2>
+            </div>
+            <div class="xl:w-1/3 lg:w-1/1 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                <h2 class="text-lg sm:text-xl dark:text-white font-medium title-font mb-2">Create a Monero-Wallet</h2>
+            </div>
+            <div class="xl:w-1/3 lg:w-1/1 md:w-full px-8 py-6 border-l-2 border-gray-800">
+                <h2 class="text-lg sm:text-xl dark:text-white font-medium title-font mb-2">Start mining with the Azure-Batch-Service using the scripts provided here</h2>
+            </div>
+        </div>
+        <div class="flex flex-col text-center w-full mb-20 mt-24">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">With the instructions provided here you will be mining Monero (XMR). Monero is one of the top-altcoins and better than bitcoin in virtually every aspect (i guess bitcoin beats Monero only in popularity).</p>
+        </div>
+    </div>
+</section>
+<section class="text-gray-400 dark:bg-gray-900 body-font">
+    <div class="container px-5 mx-auto flex flex-col">
+        <div class="lg:w-4/6 mx-auto">
+            <div class="rounded-lg h-96 overflow-hidden">
+                <iframe style="width:100%; height:100%" class="" src="https://www.youtube.com/embed/E2uDvEzJ2zA" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-2xl text-2xl font-medium title-font mb-4 dark:text-white">Setup Azure with Free Credit</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">Do you have a MSDN-subscription from your day job? Great! You must have already noticed that Microsoft keeps sending you emails asking you to open an azure-account with up to 150$ monthly credit. Follow the instructions in the mail to claim your free credits. Note that by default you don't even have to enter your credit-card-number, so you can be sure that your mining is running purely on your monthly free credit.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-10">Even if your company pays for the MSDN-subscription, the associated azure-account is your personal account and completely separated from the company. Your boss has no way of accessing it. Microsoft encourages people to use the free credits for testing and learning, and this is what you'll do: learning about using the azure-cloud and the blockchain-technology in a very practical way.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-10">Note: It is your responsibility to comply with Azure's ToS. You will be banned very quickly if you do something that Azure does not like. You should only use free credits from legitimate sources (e.g. if you have a MSDN-subscription from your day-job).</p>
+        </div>
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-2xl text-2xl font-medium title-font mb-4 dark:text-white">Get a Monero-Wallet</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">There are many ways how to create a Monero-wallet. The easiest is to setup a web-wallet with MyMonero.com.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-10">Cryptocurrencies are notorious for being targets of spectacular hacks. A web-wallet like MyMonero.com is a good way to get started and it is safe as long as you don't enter your login-details on a phishing site (check your browser's address bar to make sure that you are really on MyMonero.com before entering your password!). However, once you have accumulated a non-trivial amount of Monero you should educate yourself about the possible alternatives!</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-10">By the way: if you don't already have a password-safe like keepass you should definitely start using one to store your wallet-details (and of course all other passwords you are using). Trust me, you'll regret it if you don't start now.</p>
+        </div>
+        <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-2xl text-2xl font-medium title-font mb-4 dark:text-white">Setup the Azure Batch-Service</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">After signing up for your azure-account you can click on the following link to create a new batch-account: <a class="text-indigo-500" href="https://portal.azure.com/#create/Microsoft.BatchAccount" target="_blank">Microsoft Batch</a> I recommend using Chrome to access the azure-portal. Fill the form with the following information:</p>
+        </div>
+    </div>
+</section>
+<section class="text-gray-400 dark:bg-gray-900 body-font">
+    <div class="container px-5 mx-auto flex flex-wrap">
+        <div class="flex relative pt-10 pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Resource Group: Click 'Create New' and give it a name, e.g. 'myRecGroup'</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Account name: Just a name for your batch-account</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Location: Choose 'East US'</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Leave the other options at the default-settings.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">5</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Click on 'Review+Create' at the bottom.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">6</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Click on 'Create" on the following page to create the batch-account</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">Once you get the notification that your batch-account has been created (it will take a few seconds), go to your batch-account and create a new pool: select 'Pools' and then click 'Add'. Fill the form with the following information:</p>
+        </div>
+    </div>
+</section>
+<section class="text-gray-400 dark:bg-gray-900 body-font">
+    <div class="container px-5 mx-auto flex flex-wrap">
+        <div class="flex relative pt-10 pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Section 'Pool Detail': </h2>
+                    <h3 class="font-medium title-font dark:text-gray-400 mb-1 text-l">Pool ID: Just a name for your azure-pool </h3>
+                    <h3 class="font-medium title-font dark:text-gray-400 mb-1 text-l">VM Size: 'Standard F2 (2 Cores, 4GB)' (Choose the exact type! Otherwise you will not get the optimal hashrate!)</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Section 'Operating System':</h2>
+                    <h3 class="font-medium title-font dark:text-gray-400 mb-1 text-l">Publisher: Canonical</h3>
+                    <h3 class="font-medium title-font dark:text-gray-400 mb-1 text-l">SKU: 16-04 LTS</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Leave the other options at the default-settings.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Click on 'OK' at the bottom to create the azure-pool.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">Whenever the computers in your azure-pool get started up, they will execute a custom script which will download the mining-executable and start mining. Enter your Monero-wallet here and click on the button to generate your personalized startup-script (it should look similar to </p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4 break-all">4GwH3RADAb4A6pTDa7q7GVCBRqqNgEmpkXHnhyhDjfwnZkkXcvHbmxzAS2kPg5L4Sz9ehb5sHhuWFZBkdpadxfmgH9aokHruoYoUKjAESF</p>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 dark:bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-col px-5 pt-4 pb-6 justify-center items-center">
+        <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+            <div class="flex w-full justify-center items-end">
+                <div class="relative mr-4 lg:w-full xl:w-2/2 w-3/4 md:w-full text-left">
+                    <label for="hero-field" class="leading-7 text-sm text-gray-400">Monero Address:</label>
+                    <input type="text" id="address" name="hero-field" class="w-full dark:bg-gray-800 rounded border dark:bg-opacity-40 dark:border-gray-700 focus:ring-2 focus:ring-indigo-900 focus:bg-transparent focus:border-indigo-500 text-base outline-none dark:text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <button id="generate-button" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Generate</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-2 pb-2 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p id="generated-script" class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4 break-all">Generated Script</p>
+        </div>
+        <div class="flex justify-center">
+            <button id="copy-to-clipboard" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Copy to Clipboard</button>
+        </div>
+    </div>
+</section>
+
+<section class="dark:text-gray-400 body-font dark:bg-gray-900">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">Once the azure-pool is created, go to 'Start task'. Fill the form with the following information:</p>
+        </div>
+    </div>
+</section>
+<section class="text-gray-400 dark:bg-gray-900 body-font">
+    <div class="container px-5 mx-auto flex flex-wrap">
+        <div class="flex relative pt-10 pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">1</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Command line: here you have to copy&paste your personalized script from the textfield above</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">2</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">User identity: 'Task Autouser, Admin'</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">3</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Leave the other options at the default.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
+            <div class="h-full w-6 absolute inset-0 flex items-center justify-center">
+                <div class="h-full w-1 bg-gray-200 dark:bg-gray-800 pointer-events-none"></div>
+            </div>
+            <div class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-indigo-500 text-white relative z-10 title-font font-medium text-sm">4</div>
+            <div class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
+
+                <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
+                    <h2 class="font-medium title-font dark:text-gray-400 mb-1 text-xl">Click on 'Save'</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="dark:text-gray-400 body-font dark:bg-gray-900 justify-center">
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">The last step is to tell Azure how many mining-nodes it should start for you. This depends on the amount of free credits available in your azure-account. Basically you want to use up as much of your monthly credit as possible without actually consuming all of your credit (otherwise you'll have to repeat the setup again in the next month because azure will delete your pools if your free credits are exhausted).</p>
+        </div>
+    </div>
+    <table style="height: 104px; overflow-x:scroll" border="1" class="w-2/3 m-auto">
+        <tbody>
+            <tr>
+                <td>
+                    <br>
+                </td>
+                <td>Professional</td>
+                <td>Platform</td>
+                <td>Enterprise</td>
+            </tr>
+            <tr>
+                <td>Number of low priority nodes (F2, 2 Cores, 4GB)</td>
+                <td>
+                    <strong>
+                        3<br>
+                    </strong>
+                </td>
+                <td>
+                    <strong>
+                        6<br>
+                    </strong>
+                </td>
+                <td>
+                    <strong>
+                        9<br>
+                    </strong>
+                </td>
+            </tr>
+            <tr>
+                <td>Cost of nodes for 31 days</td>
+                <td>~48$</td>
+                <td>~97$</td>
+                <td>~145$</td>
+            </tr>
+            <tr>
+                <td>Monthly free credit</td>
+                <td>50$</td>
+                <td>100$</td>
+                <td>150$</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="container px-5 pt-24 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4">If azure is using your local currency instead of USD the numbers might look slightly different. If you run out of free credit before the end of the month, just reduce the number of nodes by one and try again.</p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4"><b>Now go back to 'Overview' and click on 'Scale'. Enter the number from the table above in the field 'Low priority nodes' (e.g. 3 if you have MSDN Professional), and click on 'Save'. Congratulations! The azure cloud is now mining Monero for you!</b></p>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-4"><b>The VM takes around 5 minutes to startup and compile the mining-software. After that you will see the number of submitted hashes slowly increasing. The displayed hashrate will vary wildly - this is normal.</b></p>
+        </div>
+    </div>
+    <div class="container px-5 pt-1 pb-4 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base mt-1 break-all">Reference: https://azurecloudminingscript.github.io/Turn_your_Azure_Free_Credits_into_Cryptocurrency.html</p>
+        </div>
+    </div>
+</section>
+

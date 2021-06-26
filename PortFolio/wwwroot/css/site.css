@@ -168,3 +168,7 @@ html {
         margin-top: 45px;
     }
 }
+
+.list-inside {
+    list-style-position: inside !important;
+}

@@ -29,6 +29,12 @@ namespace PortFolio.Controllers
             return View();
         }
 
+        [ResponseCache(Duration = 100, Location = ResponseCacheLocation.Any)]
+        public IActionResult AzureMining()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -1,0 +1,56 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Turn Your Azure Credit into Real Money">
+    <meta name="keywords" content="azure mining, monero mining, azure credit to money, azure credit to bank account, earn money, best way to earn money">
+    <meta name="author" content="Devanshu Agarwal">
+    <meta property="og:image" content="/lib/images/da-icon.png" />
+    <link rel="da icon" href="/lib/images/da-icon.png" type="image/x-icon" />
+    <link async rel="stylesheet" href="~/tailwindcss/base.min.css" asp-append-version="true">
+    <link async rel="stylesheet" href="~/tailwindcss/components.min.css" asp-append-version="true">
+    <link async rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind.min.css" asp-append-version="true">
+    <link async rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" asp-append-version="true" />
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-dark.min.css" asp-append-version="true">
+    <link async rel="stylesheet" href="~/tailwindcss/tailwind-experimental.min.css" asp-append-version="true">
+    <link async rel="stylesheet" href="~/tailwindcss/utilities.min.css" asp-append-version="true">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <header class="text-gray-600 dark:text-gray-400 dark:bg-gray-900 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center dark:text-gray-300 text-gray-900 mb-4 md:mb-0">
+                <span class="ml-3 text-xl">Azure Mining</span>
+            </a>
+            <nav class="my-nav md:ml-auto flex  flex-wrap items-center text-base justify-center">
+                <button class="mode"></button>
+            </nav>
+        </div>
+    </header>
+    <div class="frame-root">
+        <div class="frame-content">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="dark:text-gray-400 dark:bg-gray-900 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center dark:text-white">
+                <span class="ml-3 text-xl">Azure Mining</span>
+            </a>
+            <p class="text-sm dark:text-gray-400 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
+                2021 Made By Devanshu Agarwal
+            </p>
+        </div>
+    </footer>
+
+
+    <script async src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+    <script src="~/js/mining.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
