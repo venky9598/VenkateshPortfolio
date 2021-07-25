@@ -30,7 +30,7 @@ jobs:
     - name: Deploy to Azure Web App
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'devanshuagarwal'
+        app-name: 'VenkateshPortfolio'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_e54e02be5d704099b029c8702f42ef81 }}
+        publish-profile: ${{ secrets.VENKATESHCICD }}
         package: ${{env.DOTNET_ROOT}}/myapp 
